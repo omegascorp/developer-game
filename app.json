@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "developer-game2",
-    "description": "This project is really great.",
-    "slug": "developer-game2",
+    "name": "developer-game",
+    "description": "EPAM Developer Emulator Game",
+    "slug": "developer-game",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
@@ -11,8 +11,8 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#111111"
     },
     "ios": {
       "supportsTablet": true

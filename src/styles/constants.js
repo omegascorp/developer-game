@@ -1,0 +1,12 @@
+export const COLOR_DARK = "#111111";
+export const COLOR_LIGHT = "#ffffff";
+export const COLOR_PRIMARY = "#39c2d7";
+export const COLOR_SUCCESS = "#a3c644";
+export const COLOR_GRAPHITE = "#464547";
+export const COLOR_RASPBERRY = "#b22746";
+export const COLOR_PLUM = "#8e244d";
+export const COLOR_DARK_BLUE = "#1a9cb0";
+export const COLOR_DARK_GREEN = "#7f993a";
+export const COLOR_GREY_60 = "#666666";
+export const COLOR_GREY_40 = "#999999";
+export const COLOR_GREY_20 = "#cccccc";
