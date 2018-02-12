@@ -16,6 +16,7 @@ export default class Input extends React.Component {
       <TextInput
         placeholder={this.props.placeholder}
         style={[styles.input, this.styles()]}
+        underlineColorAndroid='transparent'
       />
     );
   }

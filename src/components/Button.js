@@ -1,19 +1,25 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 
-import { COLOR_LIGHT } from "../styles/constants";
+import {COLOR_DARK, COLOR_LIGHT} from "../styles/constants";
 
 export default class Button extends React.Component {
+  buttonColor() {
+    return this.props.color || COLOR_LIGHT;
+  }
+
   buttonStyle() {
     return {
       height: this.props.height || 32,
       width: this.props.width,
+      backgroundColor: this.buttonColor(),
     };
   }
 
   textStyle() {
     return {
       fontSize: this.props.height / 2,
+      color: this.buttonColor() === COLOR_LIGHT ? COLOR_DARK : COLOR_LIGHT,
     };
   }
 
