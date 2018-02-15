@@ -1,3 +1,3 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
-AppRegistry.registerComponent('developer.game', () => App);
+import MainNavigator from './src/navigators/MainNavigator';
+AppRegistry.registerComponent('developer.game', () => MainNavigator);
