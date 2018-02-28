@@ -1,14 +1,31 @@
 import React from 'react';
-import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView, Keyboard } from 'react-native';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Space from '../components/Space';
 import {COLOR_PRIMARY} from "../styles/constants";
+import {authAction} from "../emitters/authEmitter";
 
 export default class SignInScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
+
+  state = {
+    name: "aaa",
+  };
+
+  onSubmit = () => {
+    Keyboard.dismiss();
+    this.props.navigation.dispatch(authAction(this.state.name));
+  }
+
+  onChangeName = (value) => {
+    console.log("ok", value);
+    this.setState({
+      name: value,
+    });
+  }
 
   render() {
     return (
@@ -20,10 +37,16 @@ export default class SignInScreen extends React.Component {
           />
           <Space size={24} />
           <KeyboardAvoidingView behavior="padding">
-            <Input placeholder="Character name" height={48} width={192} />
+            <Input
+              value={this.state.name}
+              placeholder="Character name"
+              height={48}
+              width={192}
+              onTextChange={this.onChangeName}
+            />
           </KeyboardAvoidingView>
           <Space size={24} />
-          <Button color={COLOR_PRIMARY} height={48} onPress={() => this.props.navigation.navigate("Game")}>Start</Button>
+          <Button color={COLOR_PRIMARY} height={48} onPress={this.onSubmit}>Start</Button>
         </View>
       </View>
     );
